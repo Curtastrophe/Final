@@ -1,0 +1,33 @@
+/*
+ *
+ * Employee Class
+ * Fig 11-3
+ */
+ public class Employee
+ {
+  	private String NameIn;
+		private int IdIn;
+		
+		// Constructor to initialize properties
+		public Employee( )
+		{
+				NameIn = "Any Employee";
+				IdIn = 9999;
+		} //Employee
+		
+		public void GetEmployee( String NameIn, int IdIn, int Hours, int Pay  )
+		{
+				System.out.println("Please input a name and press Enter ");
+				NameIn = in.readLine();
+				
+				System.out.println("Please input an Id and press Enter ");
+				IdIn = Integer.parseInt(in.readLine());
+				
+		} //GetEmployee
+		
+		public void ShowEmployee( )
+		{
+				System.out.println( NameIn + " " + IdIn );
+		} //Show Employee
+		
+} //class
