@@ -1,0 +1,32 @@
+/*
+ * StaffDriver Class
+ * Fig 11-8
+ * Example of Inheritance
+ */
+ 
+ import java.io.*;
+ 
+ class StaffDriver
+ {
+  	public static void main(String args[]) throws IOException
+			{
+			// Create an object that is able to read from stdin
+			BufferedReader in = new BufferedReader (new InputStreamReader(System.in));
+			
+			//Prompt user, create Hours Integer object, read from keyboard
+			System.out.println("Please input hours and press Enter ");
+			Integer Hours = Integer.parseInt(in.readLine());
+			
+			//Prompt user, create Pay Integer object, read from keyboard
+			System.out.println("Please input pay and press Enter ");
+			Integer Pay = Integer.parseInt(in.readLine());
+			
+			//Create object of type Staff
+			Staff Staff1 = new Staff( );
+			
+			//Call methods
+			Staff1.GetEmployee( Name, Id, Hours, Pay );
+			Staff1.ComputePay( );
+			Staff1.ShowEmployee( );
+			} //main
+} //class
