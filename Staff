@@ -1,0 +1,48 @@
+/*
+ * Staff Class
+ * Fig 11-5
+ */
+ public class Staff extends Employee
+ {
+  	private int Hours;
+		private int Rate;
+		private int Pay;
+		
+		// Constructor to initalize properties
+		public Staff( )
+		{
+				Hours = 0;
+				Rate = 0;
+				Pay = 0;
+		} //Staff
+		
+		public void GetEmployee( String NameIn, int IdIn,
+								 int Hours, int Pay )
+		{
+				super.GetEmployee( NameIn, IdIn );
+				
+				System.out.println("Please input hours and press Enter ");
+				Hours = Integer.parseInt(in.readLine());
+				
+				System.out.println("Please input pay and press Enter ");
+				Pay = Integer.parseInt(in.readLine());
+		} //GetEmployee
+		
+		public void ShowEmployee( )
+		{
+				super.ShowEmployee( );
+				System.out.println( Pay + " " + Pay );
+		} //ShowEmployee
+		
+		public void ComputePay( )
+		{
+				Pay = 0;
+				if (Hours > 40)	{
+					Pay = ((40 * Rate) + ((Hours - 40) * (1.5 * Rate)));
+				}
+				else
+				{
+				Pay = Hours * Rate;
+				}
+		} //ComputePay
+} //class
